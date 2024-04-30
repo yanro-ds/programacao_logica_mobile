@@ -1,0 +1,55 @@
+<!--Aqui vai ter uma imagem pelo CSS-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="mq-estilo.css">
+    <link rel="shortcut icon" href="iconedecarrosbatidos.avif" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>MVC-Controle de Multa</title>
+</head>
+
+<body>
+    <main>
+        <section id="login">
+            <div id="imagem">
+                <!-- Aqui vai ter uma imagem pelo CSS // 
+                Criar uma pagina com sistema ou controle de Multa//
+                Controle de Alfandega = BRASIL não é Estrangeiro// -->
+            </div>
+            <div id="formulario">
+                <h1>CET - Controle de Multa</h1>
+                <p>Bem-vindo novamente, Digite a velocidade do veiculo e sua PLACA.
+                </p>
+                <p>velocidade do Veiculo:<input type="number" name="txtvel" id="txtvel"> Km/h</p>
+                <p>Placa do veiculo:<input type ="text" name="txtplaca" id="txtplaca"> (ABC1234)</p> 
+                <input type="button" value="Verificar" onclick="calcular()">
+                <div id="resp"> </div>
+
+                <script>
+                    function calcular() {
+                        var txtvel = window.document.querySelector('input#txtvel')
+                        var vel = Number(txtvel.value)
+                        var resp = window.document.querySelector('div#resp')
+                        var txtplaca = window.document.querySelector('input#txtplaca')
+                        var placa = String(txtplaca.value)
+                        //Elas são variaveis que vão calcular a velocidade  
+                        //resp.innerHTML = `<p>A velocidade do veiculo é de ${vel} Km/h</p>`
+                        if (vel > 60) {
+                            resp.innerHTML += `<p>Deu azar trouxa ${vel} Km/h veiculo, ${placa}</p>`
+                        } else {
+                            resp.innerHTML += `<p>Deu sorte dessa vez ${vel} Km/h veiculo, ${placa}</p>`
+                        }
+                    }
+                </script>
+
+        </section>
+    </main>
+
+
+</body>
+
+</html>
