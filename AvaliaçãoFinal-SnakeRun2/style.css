@@ -1,0 +1,22 @@
+@charset "UTF-08";
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: rgba(0, 89, 255, 0.829);
+    align-items: center;
+    justify-content: center;
+    /*display: flex;*/
+   background-image: url(assents/imagemJogosAtari.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+h1{
+    font-size: 2em;
+    color: white;
+}
+
+canvas{
+    border: 7px solid rgb(209, 212, 24);
+    background-color: black;
+}
